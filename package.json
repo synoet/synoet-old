@@ -3,9 +3,10 @@
   "description": "Personal Website",
   "version": "1.0.0",
   "author": "Teo Nys",
-
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
     "gatsby": "^3.4.1",
     "gatsby-plugin-gatsby-cloud": "^2.4.1",
     "gatsby-plugin-image": "^1.4.0",
@@ -23,12 +24,14 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "tailwindcss": "^2.1.2",
-    "twin.macro": "^2.4.2"
+    "twin.macro": "^2.4.2",
+    "typeface-roboto-mono": "^1.1.13"
   },
   "devDependencies": {
     "@babel/compat-data": "^7.14.4",
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
+    "@types/react-helmet": "^6.1.1",
     "babel-loader": "^8.2.2",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-preset-gatsby": "^1.6.0",
@@ -53,7 +56,6 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   }
 }

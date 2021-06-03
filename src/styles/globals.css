@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-display: optional;
+  src: url(/fonts/roboto-mono-v13-latin-regular.woff2);
+}
+
+h1 {
+  color: #F1F5F9;
+}
+
+p {
+  color: #94A3B8;
+}
+
+span {
+  border-bottom: 2px solid #6D28D9;
+}
