@@ -1,9 +1,17 @@
 import React from "react"
 import { VStack, HStack } from "@components"
 import { Title, Link } from "@atoms"
+import { useScreenType } from "@hooks"
 const Footer = () => {
+  const screenType = useScreenType()
   return (
-    <div className="w-4/5 text-sm grid grid-cols-3">
+    <div
+      className={`w-4/5 text-sm grid ${
+        screenType === "l" || screenType === "xl" || screenType === "m"
+          ? "grid-cols-3"
+          : "grid-cols-1"
+      }`}
+    >
       <VStack>
         <Title>SOCIAL</Title>
         <VStack>

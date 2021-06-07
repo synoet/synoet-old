@@ -1,5 +1,5 @@
 export { default as NavLink } from "./NavLink"
-export { default as Button } from "./Button"
+export { Button as Button } from "./Button"
 export { default as Name } from "./Name"
 export { Title as Title } from "./Text"
 export { Link as Link } from "./Text"

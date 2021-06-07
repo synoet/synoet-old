@@ -9,6 +9,7 @@ module.exports = {
         secondary: "#94A3B8",
         tertiary: "#475569",
         background: "#18181B",
+        error: '#B91C1C'
       },
       fontFamily: {
         sans: ["Roboto Mono", ...fontFamily.mono],

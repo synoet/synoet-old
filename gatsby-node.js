@@ -9,6 +9,8 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         "@atoms": path.resolve(__dirname, "src/components/Atoms"),
         "@types": path.resolve(__dirname, "src/types"),
         "@molecules": path.resolve(__dirname, "src/components/Molecules"),
+        "@hooks": path.resolve(__dirname, "src/hooks"),
+        "@images": path.resolve(__dirname, "src/images"),
       },
     },
   })

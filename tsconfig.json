@@ -24,7 +24,9 @@
       "@components": ["src/components"],
       "@atoms": ["src/components/Atoms"],
       "@types": ["src/types/index"],
-      "@molecules": ["src/components/Molecules"]
+      "@molecules": ["src/components/Molecules"],
+      "@hooks": ["src/hooks"],
+      "@images": ["src/images"]
     }
   },
   "include": ["./src/**/*"],

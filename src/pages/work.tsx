@@ -2,8 +2,10 @@ import React from "react"
 import { Layout, VStack } from "@components"
 import { Title } from "@atoms"
 import { Position, Project, Skill } from "@molecules"
+import { useScreenType } from "@hooks"
 
 const Work = () => {
+  const screenType = useScreenType()
   return (
     <Layout>
       <div className="mb-5 space-y-2">
@@ -14,7 +16,13 @@ const Work = () => {
           Everything to do with Design {"&"} Development
         </p>
       </div>
-      <div className="grid grid-cols-2 w-full">
+      <div
+        className={`grid ${
+          screenType === "l" || screenType === "xl" || screenType === "m"
+            ? "grid-cols-2"
+            : "grid-cols-1"
+        } w-full`}
+      >
         <div className="flex flex-col w-full">
           <Title>POSITIONS</Title>
           <VStack>
@@ -59,13 +67,18 @@ const Work = () => {
           </VStack>
         </div>
       </div>
-      <div className="grid grid-cols-2 w-full mt-5">
+      <div
+        className={`grid ${
+          screenType === "l" || screenType === "xl" || screenType === "m"
+            ? "grid-cols-2"
+            : "grid-cols-1"
+        } w-full mt-5`}
+      >
         <div className="flex flex-col w-full">
           <Title>LANGUAGES</Title>
           <VStack>
             <Skill name="Javascript" level="Senior" />
             <Skill name="Node.js" level="Mid" />
-            <Skill name="React" level="Senior" />
             <Skill name="Typescript" level="Mid" />
             <Skill name="HTML/CSS" level="Senior" />
             <Skill name="Python" level="Mid" />
@@ -85,7 +98,13 @@ const Work = () => {
           </VStack>
         </div>
       </div>
-      <div className="grid grid-cols-2 w-full mt-5">
+      <div
+        className={`grid ${
+          screenType === "l" || screenType === "xl" || screenType === "m"
+            ? "grid-cols-2"
+            : "grid-cols-1"
+        } w-full mt-5`}
+      >
         <div className="flex flex-col w-full">
           <Title>AMAZON WEB SERVICES</Title>
           <VStack>

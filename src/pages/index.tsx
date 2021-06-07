@@ -2,8 +2,12 @@ import * as React from "react"
 import { Layout, VStack } from "@components"
 import { Title } from "@atoms"
 import { Block } from "@molecules"
+import { useScreenType } from "@hooks"
 
 const IndexPage = () => {
+  const screenType: string = useScreenType() || "l"
+  console.log(screenType)
+
   return (
     <Layout>
       <div className="mb-10 space-y-2">
@@ -16,7 +20,13 @@ const IndexPage = () => {
           Engineer <span>@EPAM</span>
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-2 w-4/5">
+      <div
+        className={`grid ${
+          screenType === "l" || screenType === "xl" || screenType === "m"
+            ? "grid-cols-2"
+            : "grid-cols-1"
+        } gap-2 w-4/5`}
+      >
         <div className="flex flex-col w-full h-full space-y-10">
           <div>
             <Title>CURRENT EMPLOYMENT</Title>

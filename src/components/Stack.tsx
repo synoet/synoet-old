@@ -3,7 +3,7 @@ import React from "react"
 const Stack = ({ children, direction }: any) => {
   return (
     <div
-      className={`flex flex-${direction} space-${
+      className={`flex mb-2 flex-${direction} space-${
         direction === "col" ? "y" : "x"
       }-2`}
     >

@@ -1,6 +1,7 @@
 import React from "react"
 import { Layout } from "~/components"
-
+import { Block } from "@molecules"
+import { Title } from "@atoms"
 const Lab = () => {
   return (
     <Layout>
@@ -12,8 +13,20 @@ const Lab = () => {
           This is were I put the useless stuff I make
         </p>
       </div>
-      <div className="h-40 flex flex-col justify-center">
-        <p className="text-primary text-lg">😔 Under Development</p>
+      <div className="w-full flex flex-col justify-center mt-10 space-y-5">
+        <Title>RECENT LAB PROJECTS</Title>
+        <div className="grid grid-cols-2 gap-2">
+          <Block
+            title="File Store"
+            description="CRUD for files in database"
+            link="/lab/filestore"
+          />
+          <Block
+            title="Median Algorithm"
+            description="Median of Medians Visualization"
+            link="/lab/medianselection "
+          />
+        </div>
       </div>
     </Layout>
   )

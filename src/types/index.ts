@@ -21,3 +21,9 @@ export type SkillProps = {
   name: string
   level?: string
 }
+
+export type BlockProps = {
+  title: string
+  description: string
+  link?: string
+}
