@@ -2,6 +2,14 @@ const path = require("path")
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /window/,
+          use: loaders.null(),
+        }
+      ]
+    },
     resolve: {
       alias: {
         "@components": path.resolve(__dirname, "src/components"),
