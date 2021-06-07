@@ -1,7 +1,12 @@
 import React from "react"
 import { Name, NavLink } from "@atoms"
 const Nav = () => {
-  const path = window.location.pathname
+  let path: string = '/'
+  if (typeof window !== `undefined`){
+    path =  window ? window.location.pathname : '/'
+  }
+
+  
   return (
     <div className="fixed flex flex-col text-white justify-between space-y-4">
       <Name />
