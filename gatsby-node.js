@@ -1,15 +1,19 @@
 const path = require("path")
 
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ actions, stage, loaders }) => {
+  if(stage === 'build-html' || stage === "develop-html"){
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /window/,
+            use: loaders.null(),
+          }
+        ]
+      }
+    })
+  }
   actions.setWebpackConfig({
-    module: {
-      rules: [
-        {
-          test: /window/,
-          use: loaders.null(),
-        }
-      ]
-    },
     resolve: {
       alias: {
         "@components": path.resolve(__dirname, "src/components"),
